@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:#2B3595;
+    --secondary-color:#FAC213;
+    --msg-error: #DA0037;
+}
+
+.error-msg{
+    font-size: 14px;
+    padding-top: 8px;
+    text-transform: capitalize;
+    color: var(--msg-error);
+}
+
+section button{
+    border: none;
+    color: #ddd;
+    cursor: pointer;
+    min-width: 100px;
+    margin: 20px 10px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+section button:hover{
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.input-box input[type="password"],
+.input-box input[type="number"],
+.input-box input[type="email"],
+.input-box input[type="text"]{
+    padding: 10px;
+    min-width: 300px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: #ddd;
+}

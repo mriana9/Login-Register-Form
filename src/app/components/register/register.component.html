@@ -1,0 +1,128 @@
+<section class="register-form">
+    <div class="register-form-content">
+        <h2>{{"create-account" | translate}}</h2>
+
+        <form [formGroup]="registerForm">
+            <div class="input-box">
+                <label>{{"register-form.first-name" | translate}}: </label>
+                <input type="text" placeholder="{{'register-form.first-name' | translate}}" required minlength="10" maxlength="30" formControlName="first_name">
+                <p  *ngIf="registerForm.get('first_name')?.invalid  
+                    && registerForm.get('first_name')?.touched" 
+                    class="error-msg">
+                        {{
+                            registerForm.get('first_name')?.errors?.['required'] ?  [["errors.first-name-required" | translate]] : '' 
+                        }}
+                        {{ 
+                            registerForm.get('first_name')?.errors?.['minlength'] ?  [["errors.first-name-min-length" | translate]] : '' 
+                        }}
+                        {{
+                            registerForm.get('first_name')?.errors?.['maxlength'] ? [["errors.first-name-max-length" | translate]] : '' 
+                        }}
+                </p>
+            </div>
+
+            <div class="input-box">
+                <label>{{"register-form.last-name" | translate}}: </label>
+                <input type="text" placeholder="{{'register-form.last-name' | translate}}" required minlength="10" maxlength="30" formControlName="last_name">
+                <p  *ngIf="registerForm.get('last_name')?.invalid  
+                && registerForm.get('last_name')?.touched" 
+                class="error-msg">
+                    {{
+                        registerForm.get('last_name')?.errors?.['required'] ?  [["errors.last-name-required" | translate]] : '' 
+                    }}
+                    {{ 
+                        registerForm.get('last_name')?.errors?.['minlength'] ?  [["errors.last-name-min-length" | translate]] : '' 
+                    }}
+                    {{
+                        registerForm.get('last_name')?.errors?.['maxlength'] ?  [["errors.last-name-max-length" | translate]] : '' 
+                    }}
+               </p>
+            </div>
+
+            <div class="input-box">
+                <label>{{"register-form.age" | translate}}: </label>
+                <input type="number" placeholder="{{'register-form.age' | translate}}"required min="13" maxlength="80" formControlName="age">
+                <p  *ngIf="registerForm.get('age')?.invalid  
+                && registerForm.get('age')?.touched" 
+                class="error-msg">
+                    {{
+                        registerForm.get('age')?.errors?.['required'] ? [["errors.age-required" | translate]] : '' 
+                    }}
+                    {{ 
+                        registerForm.get('age')?.errors?.['min'] ? [["errors.age-min-years" | translate]] : '' 
+                    }}
+                    {{
+                        registerForm.get('age')?.errors?.['max'] ? [["errors.age-max-years" | translate]] : '' 
+                    }}
+                </p>
+            </div>
+
+            <div class="input-box gender-box">
+                <div class="form-check">
+                    <input type="radio" name="gender" formControlName="gender" value="female">
+                    <label for="female">
+                        {{"register-form.female" | translate}}
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="gender" formControlName="gender" value="male">
+                    <label  for="male">
+                        {{"register-form.male" | translate}}
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label>{{"register-form.email" | translate}}: </label>
+                <input type="email" placeholder="{{'register-form.email' | translate}}" required formControlName="email">
+                <p  *ngIf="registerForm.get('email')?.invalid  
+                && registerForm.get('email')?.touched" 
+                class="error-msg">
+                    {{
+                        registerForm.get('email')?.errors?.['required'] ? [["errors.email-required" | translate]] : '' 
+                    }}
+                    {{ 
+                        registerForm.get('email')?.errors?.['email'] ? [["errors.email-invalid" | translate]] : '' 
+                    }}
+                </p>
+                <!-- <p *ngIf="msgError.uniqueEmailMsgError" class="error-msg">{{msgError.uniqueEmailMsgError }} </p> -->
+            </div>
+
+            <div class="input-box">
+                <label>{{"register-form.password" | translate}}: </label>
+                <input type="password" placeholder="{{'register-form.password' | translate}}" required formControlName="password">
+                <p  *ngIf="registerForm.get('password')?.invalid  
+                && registerForm.get('password')?.touched" 
+                class="error-msg">
+                    {{
+                        registerForm.get('password')?.errors?.['required'] ?  [["errors.password-required" | translate]] : ''
+                    }}
+                    {{ 
+                        registerForm.get('password')?.errors?.['minlength'] ? [["errors.password-min-length" | translate]] : '' 
+                    }}
+                    {{
+                        registerForm.get('password')?.errors?.['maxlength'] ? [["errors.password-max-length" | translate]] : '' 
+                    }}
+                </p>
+            </div>
+
+            <div class="input-box">
+                <label>{{"register-form.password-confirmation" | translate}}: </label>
+                <input type="password" placeholder="{{'register-form.password-confirmation' | translate}}" required formControlName="confirm_password">
+                <!-- <p *ngIf="msgError.confirmPasswordMsgError" class="error-msg">{{msgError.confirmPasswordMsgError}}</p> -->
+                <p class="error-msg" *ngIf="registerForm.get('confirm_password')?.invalid  
+                && registerForm.get('confirm_password')?.touched" >{{"errors.confirm-password-required" | translate}}</p>
+            </div>
+
+            <div class="button-box">
+                <button type="submit" [disabled]="!registerForm.valid" (click)="register()">{{"register" | translate}}</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="register-img">
+        <p>{{"mariana" | translate}}</p>
+    </div>
+</section>
+
+<app-footer></app-footer>

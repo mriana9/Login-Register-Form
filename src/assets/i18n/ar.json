@@ -1,0 +1,45 @@
+{
+    "mariana": "ماريانا",
+    "hello": "مرحبا",
+    "logout":"تسجيل الخروج",
+    "login": "تسجيل دخول",
+    "register": "انشاء حساب",
+    "welcome": " !في تطبيق ماريانا , ابدأ الأن",
+    "create-account": "انشاء حساب جديد ",
+    "my-account": "ملفي الشخصي",
+
+    "register-form": {
+        "first-name": "الاسم الأول",
+        "last-name": "الاسم الأخير",
+        "email": "البريد الالكتروني",
+        "age": "العمر",
+        "gender": "الجنس",
+        "female": "انثى",
+        "male": "ذكر",
+        "password":"كلمة المرور",
+        "password-confirmation" :"تاكيد كلمة المرور"
+    },
+
+    "errors": {
+        "first-name-required": " * الاسم الأول مطلوب",
+        "last-name-required": " * الاسم الأخير مطلوب",
+        "age-required": " * العمر مطلوب",
+        "email-required": " * البريد الالكتروني مطلوب",
+        "password-required": " * كلمة المرور مطلوبة",
+        "confirm-password-required": " * تاكيد كلمة المرور مطلوب",
+
+        "first-name-min-length": " * الاسم الأول يجب ان يكون الحد الادني 10 حروف",
+        "last-name-min-length": " * الاسم الأخير يجب ان يكون الحد الادني 10 حروف",
+        "age-min-years": " * أقل عمر مسموح به هو 13 سنة",
+        "email-invalid": " * البريد الالكتروني غير صحيح",
+        "email-unique": " * هذا البريد مستخدم من حساب أخر",
+        "password-min-length": " * كلمة المرور يجب ان تكون اكبر من 6 أحرف",
+        "confirm-password-invalid": " * كلمة المرور غير متطابقة",
+
+        "first-name-max-length": " * الاسم الأول يجب ان يكون الحد الاعلى 30 حروف",
+        "last-name-max-length": " * الاسم الأخير يجب ان يكون الحد الاعلى 30 حروف",
+        "age-max-years": " * أقصى عمر مسموح به هو 80 سنة",
+        "password-max-length": " * كلمة المرور يجب ان تكون أقل من 15 حرف"
+    }
+
+}

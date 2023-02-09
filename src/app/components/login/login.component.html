@@ -1,0 +1,33 @@
+<section class="login-form">
+    <div class="login-form-content">
+        <form [formGroup]="loginForm">
+            <div class="input-box">
+                <input type="email" placeholder="{{'register-form.email' | translate}}" required formControlName="email">
+                <p  *ngIf="loginForm.get('email')?.invalid  
+                && loginForm.get('email')?.touched" 
+                class="error-msg">
+                    {{
+                        loginForm.get('email')?.errors?.['required'] ? [["errors.email-required" | translate]] : '' 
+                    }}
+                </p>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="{{'register-form.password' | translate}}" required formControlName="password">
+                <p  *ngIf="loginForm.get('password')?.invalid  
+                && loginForm.get('password')?.touched" 
+                class="error-msg">
+                    {{
+                        loginForm.get('password')?.errors?.['required'] ?  [["errors.password-required" | translate]] : ''
+                    }}
+                </p>
+            </div>
+
+            <div class="button-box">
+                <button type="submit" [disabled]="!loginForm.valid" (click)="login()">{{"login" | translate}}</button>
+            </div>
+        </form>
+    </div>    
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,45 @@
+{
+    "mariana": "mariana",
+    "hello": "hello",
+    "logout":"logout",
+    "login": "login",
+    "register": "register",
+    "welcome":"To My App, Get Started Right Now!",
+    "create-account": "Create Account",
+    "my-account": "My Account",
+
+    "register-form": {
+        "first-name": " first name",
+        "last-name": " last name",
+        "email": "email",
+        "age": "age",
+        "gender": "gender",
+        "female": "female",
+        "male": "male",
+        "password":"password",
+        "password-confirmation" :" confirm password"
+    },
+
+    "errors": {
+        "first-name-required": " * first name is required",
+        "last-name-required": " * last name is required",
+        "age-required": " * age is required",
+        "email-required": " * email is required",
+        "password-required": " * password is required",
+        "confirm-password-required": " * confirm password is required",
+
+        "first-name-min-length": " * first name  should be min 10 characters",
+        "last-name-min-length": " * last name  should be min 10 characters",
+        "age-min-years": " *age should be min 13 years",
+        "email-invalid": " * email not invalid",
+        "email-unique": " * this email already used",
+        "password-min-length": " * password should be min 6 characters",
+        "confirm-password-invalid": " * Please enter a valid password",
+
+        "first-name-max-length": " * first name  should be max 30 characters",
+        "last-name-max-length": " * last name  should be max 30 characters",
+        "age-max-years": " *age should be max 80 years",
+        "password-max-length": " * password should be max 15 characters"
+    }
+
+}

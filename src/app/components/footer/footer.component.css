@@ -1,0 +1,12 @@
+footer{
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+}
